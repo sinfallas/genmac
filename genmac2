@@ -1,0 +1,17 @@
+#!/bin/bash
+# Made by Sinfallas <sinfallas@yahoo.com>
+# Licence: GPL-2
+LC_ALL=C
+echo -n "54:52:00"
+for i in 1 2 3; do
+echo -n ":"
+for j in 1 2; do
+for k in 0 1 2 3 4 5 6 7 8 9 A B C D E F; do
+echo $k
+done | rl | sed -n 1p
+done | while read m; do
+echo -n $m
+done
+done
+echo
+exit 0
