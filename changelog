@@ -1,4 +1,16 @@
-commit e8a2b3070ca46ba388788b81c450840d9885e6f0 (HEAD, origin/master, origin/HEAD, master)
+commit 1e98e5768eb4864912f433137a035bd77fe4b910 (HEAD, origin/master, origin/HEAD, master)
+Author: jose perez <sinfallas@gmail.com>
+Date:   Wed Dec 2 22:16:09 2015 -0430
+
+    * se agregan todos los scripts
+
+commit 6d406e421d851673a3321da312f6e3e290cec2d8
+Author: jose perez <sinfallas@gmail.com>
+Date:   Wed Dec 2 21:33:04 2015 -0430
+
+    * changelog
+
+commit e8a2b3070ca46ba388788b81c450840d9885e6f0
 Author: jose perez <sinfallas@gmail.com>
 Date:   Wed Dec 2 21:32:30 2015 -0430
 
