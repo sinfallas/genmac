@@ -1,4 +1,28 @@
-commit 1e98e5768eb4864912f433137a035bd77fe4b910 (HEAD, origin/master, origin/HEAD, master)
+commit 410af311e511294abefa988822de16edc612f7ae (HEAD, origin/master, origin/HEAD, master)
+Author: jose perez <sinfallas@gmail.com>
+Date:   Wed Dec 2 22:28:15 2015 -0430
+
+    * readme travis
+
+commit 9535401f9b85ec81d6a8f0f41eb5cb1cb47eb05b
+Author: jose perez <sinfallas@gmail.com>
+Date:   Wed Dec 2 22:26:33 2015 -0430
+
+    * bugfix
+
+commit 0982ed7dc01978625ff27d9343675e165699b91d
+Author: jose perez <sinfallas@gmail.com>
+Date:   Wed Dec 2 22:20:36 2015 -0430
+
+    * travis
+
+commit d9b7d3212c2db9d0f5cf746bf9f8f2f3fbf1b869
+Author: jose perez <sinfallas@gmail.com>
+Date:   Wed Dec 2 22:16:41 2015 -0430
+
+    * changelog
+
+commit 1e98e5768eb4864912f433137a035bd77fe4b910
 Author: jose perez <sinfallas@gmail.com>
 Date:   Wed Dec 2 22:16:09 2015 -0430
 
