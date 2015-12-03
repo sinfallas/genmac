@@ -2,5 +2,5 @@
 # Made by Sinfallas <sinfallas@yahoo.com>
 # Licence: GPL-2
 LC_ALL=C
-printf '54:52:00:%02X:%02X:%02X\n' $((RANDOM%256)) $((RANDOM%256)) $((RANDOM%256))
+echo '54 52 00'$(od -An -N3 -t xC /dev/urandom) | sed -e 's/ /:/g'
 exit 0

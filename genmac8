@@ -1,0 +1,13 @@
+#!/bin/bash
+# Made by Sinfallas <sinfallas@yahoo.com>
+# Licence: GPL-2
+LC_ALL=C
+LC_CTYPE=C
+MAC=54:52:00
+for i in {1..3}
+do
+    IFS= read -d '' -r -n 1 char < /dev/urandom
+    MAC+=$(printf -- ':%02x\n' "'$char")
+done
+printf '%s\n' "$MAC"
+exit 0

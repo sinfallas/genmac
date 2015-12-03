@@ -1,2 +1,2 @@
 # genmac
-Random MAC address generator
+Random MAC address generator scripts

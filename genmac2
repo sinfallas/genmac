@@ -2,16 +2,19 @@
 # Made by Sinfallas <sinfallas@yahoo.com>
 # Licence: GPL-2
 LC_ALL=C
-echo -n "54:52:00"
-for i in 1 2 3; do
-echo -n ":"
-for j in 1 2; do
-for k in 0 1 2 3 4 5 6 7 8 9 A B C D E F; do
-echo $k
-done | rl | sed -n 1p
-done | while read m; do
-echo -n $m
+HEX=(a b c d e f 0 1 2 3 4 5 6 7 8 9)
+SL=0
+while [ $SL -lt 17 ]
+do
+        num=`shuf -i 0-15 -n 1`
+        RMAC="$RMAC""${HEX[$num]}"
+        num=`shuf -i 0-15 -n 1`
+        RMAC="$RMAC""${HEX[$num]}"
+        SL=$[`echo $RMAC | wc -c` - 1]
+    if [ $SL -lt 17 ]
+            then
+            RMAC=""$RMAC":"
+    fi
 done
-done
-echo
+echo $RMAC
 exit 0
