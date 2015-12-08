@@ -2,5 +2,73 @@
 # Made by Sinfallas <sinfallas@yahoo.com>
 # Licence: GPL-2
 LC_ALL=C
-printf '54:52:00:%02X:%02X:%02X\n' $((RANDOM%256)) $((RANDOM%256)) $((RANDOM%256))
+case "$1" in
+	1)
+		printf '54:52:00:%02X:%02X:%02X\n' $((RANDOM%256)) $((RANDOM%256)) $((RANDOM%256))
+		;;
+
+	2)
+		HEX=(a b c d e f 0 1 2 3 4 5 6 7 8 9)
+		SL=0
+		while [[ $SL -lt 17 ]]; do
+			num=`shuf -i 0-15 -n 1`
+			RMAC="$RMAC""${HEX[$num]}"
+			num=`shuf -i 0-15 -n 1`
+			RMAC="$RMAC""${HEX[$num]}"
+			SL=$[`echo $RMAC | wc -c` - 1]
+			if [[ $SL -lt 17 ]]; then
+				RMAC=""$RMAC":"
+			fi
+		done
+		echo "$RMAC"
+		;;
+
+	3)
+		hexchars="0123456789ABCDEF"
+		end=$( for i in {1..6}; do echo -n ${hexchars:$(( $RANDOM % 16 )):1}; done | sed -e 's/\(..\)/:\1/g' )
+		echo 54:52:00$end
+		;;
+
+	4)
+		RANGE=255
+		number=$RANDOM
+		numbera=$RANDOM
+		numberb=$RANDOM
+		let "number %= $RANGE"
+		let "numbera %= $RANGE"
+		let "numberb %= $RANGE"
+		octets='54:52:00'
+		octeta=`echo "obase=16;$number" | bc`
+		octetb=`echo "obase=16;$numbera" | bc`
+		octetc=`echo "obase=16;$numberb" | bc`
+		macadd="${octets}:${octeta}:${octetb}:${octetc}"
+		echo $macadd
+		;;
+
+	5)
+		echo '54 52 00'$(od -An -N3 -t xC /dev/urandom) | sed -e 's/ /:/g'
+		;;
+
+	6)
+		echo 54:52:00:$[RANDOM%10]$[RANDOM%10]:$[RANDOM%10]$[RANDOM%10]:$[RANDOM%10]$[RANDOM%10]
+		;;
+
+	7)
+		echo 54:52:00$(hexdump -n3 -e '/1 ":%02X"' /dev/random)
+		;;
+
+	8)
+		MAC=54:52:00
+		for i in {1..3}; do
+			IFS= read -d '' -r -n 1 char < /dev/urandom
+			MAC+=$(printf -- ':%02x\n' "'$char")
+		done
+		printf '%s\n' "$MAC"
+		;;
+
+	*)
+		echo "uso: $(basename $0) {1|2|3|4|5|6|7|8}"
+		;;
+
+esac
 exit 0

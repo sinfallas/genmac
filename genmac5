@@ -1,6 +1,0 @@
-#!/bin/bash
-# Made by Sinfallas <sinfallas@yahoo.com>
-# Licence: GPL-2
-LC_ALL=C
-echo '54 52 00'$(od -An -N3 -t xC /dev/urandom) | sed -e 's/ /:/g'
-exit 0
