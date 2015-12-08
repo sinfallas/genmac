@@ -1,4 +1,16 @@
-commit 69a90025e06f8443befa17bdc880633280183719 (HEAD, origin/master, origin/HEAD, master)
+commit cb079d839573c71f6a04a7c5220e3bd86348859b (HEAD, origin/master, origin/HEAD, master)
+Author: jose perez <sinfallas@gmail.com>
+Date:   Mon Dec 7 21:36:40 2015 -0430
+
+    * se combinan todos los script en uno solo
+
+commit 25e27d470867e66f0fb614feaf3e9e46865ef4b9
+Author: jose perez <sinfallas@gmail.com>
+Date:   Sun Dec 6 18:05:17 2015 -0430
+
+    * changelog
+
+commit 69a90025e06f8443befa17bdc880633280183719
 Author: jose perez <sinfallas@gmail.com>
 Date:   Wed Dec 2 22:31:06 2015 -0430
 
