@@ -1,4 +1,17 @@
-commit cb079d839573c71f6a04a7c5220e3bd86348859b (HEAD, origin/master, origin/HEAD, master)
+commit 793b11aab7c1a9b5f9c7ed9945c0ee9d0f0bc0d4 (HEAD, origin/master, origin/HEAD, master)
+Author: jose perez <sinfallas@gmail.com>
+Date:   Tue Dec 8 20:24:09 2015 -0430
+
+    * se mejora el mensaje de uso
+    * se cambian los nombres de algunas variables
+
+commit e07989562c8b07bac293cdc306a78db08bd202fe (tag: v0.1)
+Author: jose perez <sinfallas@gmail.com>
+Date:   Mon Dec 7 21:37:11 2015 -0430
+
+    * changelog
+
+commit cb079d839573c71f6a04a7c5220e3bd86348859b
 Author: jose perez <sinfallas@gmail.com>
 Date:   Mon Dec 7 21:36:40 2015 -0430
 
